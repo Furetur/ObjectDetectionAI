@@ -1,0 +1,1 @@
+web: sh get_weights.sh && python manage.py runserver
