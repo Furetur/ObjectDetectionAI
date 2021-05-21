@@ -8,10 +8,14 @@ RUN sh get_weights.sh
 
 FROM python:3
 
-COPY requirements.txt ~/repo
+RUN apt-get update && apt-get install -y python3-opencv
+
+WORKDIR ~/repo
+
+COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
-COPY . ~/repo
-COPY --from=builder ~/repo/modelconfig/yolov3.weights ~/repo/modelconfig/yolov3.weights
+COPY . .
+COPY --from=builder ~/repo/modelconfig/yolov3.weights modelconfig/yolov3.weights
 
 ENTRYPOINT ["python",  "manage.py",  "runserver"]
