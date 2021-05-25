@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object Detection</title>
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+</head>
+<body>
+    <header>
+        <nav>
+            Object Detection
+            <ul>
+                <li><a href="/">Home</a></li>
+            </ul>
+        </nav>
+        <h1>Thanks for sending an image</h1>
+        <p>We have saved it in our databases :)</p>
+    </header>
+    <main>
+        <article>
+            <h2>Results</h2>
+
+            <aside>
+                <p>This is a stolen neural network</p>
+            </aside>
+
+            <figure>
+                <img src="{{ output }}" alt="Output image" style="max-height: 700px;">
+                <figcaption><i>What neural network thinks</i></figcaption>
+            </figure>
+            <details>
+                <summary>Original image</summary>
+                <p>
+                <figure>
+                    <img src="{{ input }}" alt="Input image" style="max-height: 700px;">
+                    <figcaption><i>Original image</i></figcaption>
+                </figure>
+                </p>
+            </details>
+        </article>
+    </main>
+</body>
+</html>
